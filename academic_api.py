@@ -10,7 +10,7 @@ def verificar_dominio():
 
     dominio = re.findall(r"@(.*)", email)[0]
 
-    dominios_permitidos = leer_dominios_txt("academic.txt")
+    dominios_permitidos = leer_dominios_txt("src/academic.txt")
 
     if dominio in dominios_permitidos:
         return jsonify({"Valid"})
